@@ -4,6 +4,7 @@ import com.example.security.dto.AuthDto;
 import com.example.security.dto.LoginResponseDto;
 import com.example.security.dto.RegisterDto;
 import com.example.security.entities.User;
+import com.example.security.entities.UserRole;
 import com.example.security.repositories.UserRepository;
 import com.example.security.security.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +48,7 @@ public class AuthController {
         }
 
         String encryptedPassword = new BCryptPasswordEncoder().encode(register.getPassword());
-        User user = new User(register.getName(), encryptedPassword, register.getRole());
+        User user = new User(register.getName(), encryptedPassword, UserRole.USER);
 
         userRepository.save(user);
 
