@@ -1,8 +1,8 @@
 package com.example.security.controllers;
 
-import com.example.security.dto.AuthDto;
-import com.example.security.dto.LoginResponseDto;
-import com.example.security.dto.RegisterDto;
+import com.example.security.dto.auth.AuthDto;
+import com.example.security.dto.auth.LoginResponseDto;
+import com.example.security.dto.auth.RegisterDto;
 import com.example.security.entities.User;
 import com.example.security.entities.UserRole;
 import com.example.security.repositories.UserRepository;
